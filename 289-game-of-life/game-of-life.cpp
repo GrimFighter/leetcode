@@ -3,12 +3,12 @@ public:
     void gameOfLife(vector<vector<int>>& board) {
         int m = board.size(), n = board[0].size();
 
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < m; ++i) {
+            for (int j = 0; j < n; ++j) {
                 int ones = 0;
 
-                for (int x = max(0, i - 1); x < min(m, i + 2); x++) {
-                    for (int y = max(0, j - 1); y < min(n, j + 2); y++) {
+                for (int x = max(0, i - 1); x < min(m, i + 2); ++x) {
+                    for (int y = max(0, j - 1); y < min(n, j + 2); ++y) {
                         ones += board[x][y] & 1;
                     }
                 }
