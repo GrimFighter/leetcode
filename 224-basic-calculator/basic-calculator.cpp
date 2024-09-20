@@ -2,7 +2,7 @@ class Solution {
 public:
     int calculate(string s) {
 
-        // if(s.size() == 1) return stoi(s);
+    
         int num = 0, ans = 0, sign = 1;
 
         stack<int> stack{{sign}};
