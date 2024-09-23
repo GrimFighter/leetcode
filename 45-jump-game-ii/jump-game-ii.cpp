@@ -13,8 +13,6 @@ public:
             if (i == end) {
                 end = far;
                 ++jumps;
-
-                
             }
         }
         return jumps;
