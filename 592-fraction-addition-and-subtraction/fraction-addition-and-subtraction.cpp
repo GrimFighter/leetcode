@@ -14,7 +14,7 @@ class Solution
                 A = A *b + B * a;
                 B = B * b;
 
-                int div = abs(gcd(A, B));
+                int div = (gcd(A, B));
 
                 A /= div;
                 B /= div;
