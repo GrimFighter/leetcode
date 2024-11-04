@@ -9,16 +9,30 @@ class Solution:
     def getIntersectionNode(
         self, headA: ListNode, headB: ListNode
     ) -> Optional[ListNode]:
-        a = headA
-        b = headB
+        # a = headA
+        # b = headB
 
-        while a != b:
-            if a != None:
-                a = a.next
-            else:
-                a = headB
-            if b != None:
-                b = b.next
-            else:
-                b = headA
-        return a
+        # while a != b:
+        #     if a != None:
+        #         a = a.next
+        #     else:
+        #         a = headB
+        #     if b != None:
+        #         b = b.next
+        #     else:
+        #         b = headA
+        # return a
+
+        a = headA
+        dic = {}
+
+        while a:
+            dic[a] = a.val
+            a = a.next
+        a = headB
+
+        while a:
+            if a in dic:
+                return a
+            a = a.next
+        return None
